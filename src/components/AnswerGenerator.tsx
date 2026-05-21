@@ -31,13 +31,17 @@ export const AnswerGenerator = () => {
     return { rgaController, updateQuery, executeSearch, logSearchboxSubmit };
   }, []);
 
-  // 2. Persist to Session Storage & Auto-scroll
+  const handleLogout = () => {
+  sessionStorage.removeItem('isLoggedIn');
+  window.location.reload(); // Refresh to trigger the login screen again
+};
+
   useEffect(() => {
     sessionStorage.setItem('coveo_chat_history', JSON.stringify(messages));
     scrollRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
-  // 3. Subscribe to RGA Controller
+  
   useEffect(() => {
     const unsubscribe = rgaController.subscribe(() => {
       setRgaState(rgaController.state);
@@ -45,7 +49,7 @@ export const AnswerGenerator = () => {
     return unsubscribe;
   }, [rgaController]);
 
-  // 4. Finalize the Assistant's message when streaming ends
+  
   useEffect(() => {
     if (rgaState?.answer && !rgaState.isStreaming && !rgaState.isLoading) {
       setMessages((prev) => {
@@ -71,7 +75,12 @@ export const AnswerGenerator = () => {
 
   return (
     <div style={containerStyle}>
-      <div style={chatHeaderStyle}>Coveo Assistant</div>
+      <div style={chatHeaderStyle}>
+        Coveo Assistant
+        <button onClick={handleLogout} style={{ float: 'right', fontSize: '12px', cursor: 'pointer', background: 'none', border: 'none', color: '#007AFF' }}>
+          Logout
+        </button>
+      </div>
       
       <div style={chatWindowStyle}>
         {messages.map((msg, idx) => (
