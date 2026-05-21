@@ -1,0 +1,13 @@
+[6n[?9001h[?1004h[m]0;C:\Windows\system32\cmd.exe[?25h[?25l
+> @samples/headless-rga-react@0.1.0 build C:\demo\coveo-uikit\samples\headless\rga-react
+> tsc && vite build[6;1H[?25h[36mvite v8.0.10 [32mbuilding client environment for production...
+[m[Ktransforming (73) [2m..\..\..\packages\headless\dist\esm\features\analytics\gen[22m[K[2mtransforming (77) ..\..\..\packages\headless\dist\esm\api\platform-client.js[22m[2mtransforming (80) ..\..\..\packages\headless\dist\esm\features\recent-querie[22m    [7;77H[K[2mtransforming (79) ..\..\..\packages\headless\dist\esm\features\configuration[22m[K[2mtransforming (75) ..\..\..\packages\headless\dist\esm\controllers\relevance-[22m    [7;77H[K[2mtransforming (74) ..\..\..\packages\headless\dist\esm\features\result-previe[22m[K[K[2mtransforming (409) ..\..\..\packages\headless\dist\esm\features\query-sugges[22m    [7;77H[2mtransforming (408) ..\..\..\packages\headless\dist\esm\features\sort-criteri[22m    [7;77H[K[2mtransforming (403) ..\..\..\node_modules\.pnpm\@ag-ui+client@0.0.52\node_mod[22m    [7;77H[2mtransforming (410) ..\..\..\packages\headless\dist\esm\controllers\result-li[22m    [7;77H[K[2mtransforming (541) ..\..\..\node_modules\.pnpm\@ag-ui+proto@0.0.52\node_modu[22m    [7;77H[K[32m[2m✓ [m[2m823 modules transformed.
+[22m[K[2mrendering chunks (1)...[22m[K[2mcomputing gzip size...
+[22m[K[?25l[2mdist/[32m[22mindex.html[16X[m[1m[2m[16C  0.34 kB[22m[2m │ gzip:   0.25 kB
+dist/assets/[36m[22mindex-ApBKAFBg.js  [33m[1m739.03 kB[m[2m │ gzip: 205.05 kB[32m[22m[12;1H✓ built in 1.74s
+[?25h[m[K[33m[plugin builtin:vite-reporter] [1m
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[?9001l[?1004l[m
